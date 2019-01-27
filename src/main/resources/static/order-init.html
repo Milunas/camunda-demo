@@ -1,0 +1,22 @@
+<html>
+ <head>
+     <meta charset="UTF-8">
+ </head>
+ <body>
+  <form action="http://localhost:41/rest/init" method="post">
+    <label for="">nazwaTowaru1</label> <input name="nazwaTowaru1" value="TOWAR1"></br>
+    <label for="">wartoscTowaru1</label> <input name="wartoscTowaru1" value="9,99"></br>
+    <label for="">liczbaSztukTowaru1</label> <input name="liczbaSztukTowaru1"  value="1"></br>
+    <label for="">jednostkaTowaru1</label> <input name="jednostkaTowaru1" value="szt."></br>
+    <label for="">nazwaTowaru2</label> <input name="nazwaTowaru2" value="TOWAR2"></br>
+    <label for="">wartoscTowaru2</label> <input name="wartoscTowaru2" value="49.50"></br>
+    <label for="">liczbaSztukTowaru2</label> <input name="liczbaSztukTowaru2" value="1"></br>
+    <label for="">jednostkaTowaru2</label> <input name="jednostkaTowaru2" value="szt."></br>
+    <input type="submit" value="Zamów">
+  </form>
+  <!--
+    /rest/process-definition/key/Sample/start [with variables]
+    /rest/task/?processInstanceId={processInstanceId}
+   !-->
+ </body>
+</html>
