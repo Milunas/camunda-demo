@@ -30,7 +30,7 @@ public class SwitchStepService {
             template.convertAndSend("/process/" + processInstanceId, message);
         }
         catch (Exception ex){
-            throw new CannotSendSwitchStepMessageException();
+            throw new CannotSendSwitchStepMessageException("???");
         }
     }
 

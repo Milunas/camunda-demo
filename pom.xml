@@ -10,6 +10,7 @@
     <modules>
         <module>camunda-demo-plugin</module>
     </modules>
+
     <dependencyManagement>
             <dependencies>
                 <dependency>
@@ -32,6 +33,11 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-websocket</artifactId>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
             </dependency>
 
             <dependency>
@@ -78,5 +84,7 @@
                 </plugin>
             </plugins>
         </build>
+
+
 
 </project>

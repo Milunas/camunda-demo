@@ -16,12 +16,14 @@ TODO:
 * dodać plugin do tasklisty, request interceptor                 +
  (https://github.com/camunda/camunda-bpm-examples/tree/master/cockpit)
  (https://github.com/camunda/camunda-bpm-examples/tree/7.9/cockpit/cockpit-sample-plugin)
-* nadpisać @EventListener
-* exception mapper - skonfigurować w camunda
+* exception handler - skonfigurować w camunda
+ (https://www.baeldung.com/exception-handling-for-rest-with-spring)
 * logback.xml                                                    +
 (https://springframework.guru/using-yaml-in-spring-boot-to-configure-logback/)
-* audyt (security eventy) // filtry w Camunda (https://docs.camunda.org/optimize/latest/technical-guide/plugins/engine-rest-filter/)
-(https://dennis-xlc.gitbooks.io/restful-java-with-jax-rs-2-0-2rd-edition/en/part1/chapter12/server_side_filters.html)
+* audyt (security eventy) // filtry w Camunda                    +
+ (https://www.baeldung.com/spring-delegating-filter-proxy)
+ (https://www.baeldung.com/jersey-filters-interceptors)
+ (https://dennis-xlc.gitbooks.io/restful-java-with-jax-rs-2-0-2rd-edition/en/part1/chapter12/server_side_filters.html)
 * testy camundy
 * podgląd formularzy z tasklisty (return link - tryb podglądu)
 * dodać integracje z zewnętrznym systemem (scheduler)
@@ -30,4 +32,5 @@ TODO:
 * więcej pluginów? do camundy?
 * instrukcja instalacji lokalnie
 * maven profiles
+* katalon - testy
 * heroku? jenkins?

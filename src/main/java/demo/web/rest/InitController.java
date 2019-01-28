@@ -1,6 +1,7 @@
 package demo.web.rest;
 
 import demo.domain.process.variables.order.Order;
+import demo.infrastructure.error.camunda.web.CannotSendSwitchStepMessageException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,6 +20,12 @@ public class InitController {
         logger.info("HELLO");
         logger.warn("HELLO!");
         return "HELLO";
+    }
+
+    @GetMapping("/test")
+    public String test(){
+        logger.error("ERROR");
+        throw new CannotSendSwitchStepMessageException("CANNOT, JUST CANNOT");
     }
 
     @PostMapping("/init")
