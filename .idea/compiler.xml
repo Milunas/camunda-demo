@@ -6,13 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="camunda-demo" />
-        <module name="camundademo" />
+        <module name="camundademoplugin" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="operator-tasklist-plugin" target="1.8" />
-      <module name="operator-tasklist-plugin (1)" target="1.8" />
+      <module name="camunda-webapp" target="1.7" />
+      <module name="cockpit-sample-plugin" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

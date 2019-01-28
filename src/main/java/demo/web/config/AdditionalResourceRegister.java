@@ -1,5 +1,6 @@
 package demo.web.config;
 
+import demo.infrastructure.error.GlobalExceptionController;
 import demo.web.rest.InitController;
 import demo.web.rest.PaymentRestController;
 import demo.web.socket.config.WebSocketConfig;
@@ -18,5 +19,6 @@ public class AdditionalResourceRegister extends CamundaJerseyResourceConfig{
         register(InitController.class);
         register(WebSocketController.class);
         register(WebSocketConfig.class);
+        register(GlobalExceptionController.class);
     }
 }

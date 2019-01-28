@@ -5,8 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>camunda-demo</groupId>
     <artifactId>camunda-demo</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
-        <dependencyManagement>
+    <modules>
+        <module>camunda-demo-plugin</module>
+    </modules>
+    <dependencyManagement>
             <dependencies>
                 <dependency>
                     <groupId>org.springframework.boot</groupId>
@@ -35,6 +39,13 @@
                 <artifactId>camunda-bpm-spring-boot-starter-webapp</artifactId>
                 <version>3.2.0</version>
             </dependency>
+
+            <dependency>
+                <groupId>org.camunda.bpm.cockpit.plugin</groupId>
+                <artifactId>cockpit-sample-plugin</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+
             <dependency>
                 <groupId>com.h2database</groupId>
                 <artifactId>h2</artifactId>

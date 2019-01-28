@@ -13,9 +13,9 @@ TODO:
 * podpiąć websocket (https://www.baeldung.com/websockets-spring) +
 * zrobić prosty formularz                                        +
 * dodać do formularza websocket
-* dodać plugin do tasklisty, request interceptor
- (https://github.com/camunda/camunda-bpm-webapp)
+* dodać plugin do tasklisty, request interceptor                 +
  (https://github.com/camunda/camunda-bpm-examples/tree/master/cockpit)
+ (https://github.com/camunda/camunda-bpm-examples/tree/7.9/cockpit/cockpit-sample-plugin)
 * nadpisać @EventListener
 * exception mapper - skonfigurować w camunda
 * logback.xml
