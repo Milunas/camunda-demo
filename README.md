@@ -18,7 +18,8 @@ TODO:
  (https://github.com/camunda/camunda-bpm-examples/tree/7.9/cockpit/cockpit-sample-plugin)
 * nadpisać @EventListener
 * exception mapper - skonfigurować w camunda
-* logback.xml
+* logback.xml                                                    +
+(https://springframework.guru/using-yaml-in-spring-boot-to-configure-logback/)
 * audyt (security eventy) // filtry w Camunda (https://docs.camunda.org/optimize/latest/technical-guide/plugins/engine-rest-filter/)
 (https://dennis-xlc.gitbooks.io/restful-java-with-jax-rs-2-0-2rd-edition/en/part1/chapter12/server_side_filters.html)
 * testy camundy
