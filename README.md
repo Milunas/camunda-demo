@@ -34,3 +34,6 @@ TODO:
 * maven profiles
 * katalon - testy
 * heroku? jenkins?
+
+LINKS:
+https://demo.bpmn.io - free online bpmn-modeler
