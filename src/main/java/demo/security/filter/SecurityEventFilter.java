@@ -1,4 +1,4 @@
-package demo.web.filter;
+package demo.security.filter;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
@@ -25,3 +25,7 @@ public class SecurityEventFilter implements Filter {
 
     }
 }
+
+// /api/admin/auth/user/default/logout *LOGOUT
+// /api/admin/auth/user/default/login/cockpit *LOGIN (successful, unsuccessful)
+// + REQUEST INTERCEPTOR (browserfingerprint header)
