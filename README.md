@@ -1,7 +1,7 @@
 
 ABOUT:
-Camunda with Angular integration through sockets
-(Camunda + Spring Boot 2 + Web socket (socket.js, stomp.js) + Angular 7 + Web app plugins)
+Camunda with websockets
+(Camunda + Spring Boot 2 + Websocket (socket.js, stomp.js))
 
 CAMUNDA API:
 https://blog.camunda.com/post/2015/08/start-and-complete-process-with-rest-api/
@@ -28,7 +28,9 @@ TODO:
 * podgląd formularzy z tasklisty (return link - tryb podglądu)
 * dodać integracje z zewnętrznym systemem (scheduler)
 * ssl
-* rabbitMQ? potrzebny?
+* flyway
+ (https://github.com/jangalinski/camunda-bpm-flyway)
+* rabbitMQ? potrzebny? (kafka, akka)
 * więcej pluginów? do camundy?
 * instrukcja instalacji lokalnie
 * maven profiles

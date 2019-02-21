@@ -9,9 +9,9 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class SwitchStepController {
 
-    @MessageMapping("/process/{processId}")
-    @SendTo("/process/{processId}")
+/*    @MessageMapping("/process") ///{processId}
+    @SendTo("/process") // /{processId}
     public SwitchStepMessage send(@DestinationVariable String processId, final SwitchStepMessage message){
         return message;
-    }
+    }*/
 }

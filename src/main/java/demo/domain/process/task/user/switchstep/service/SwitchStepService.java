@@ -11,7 +11,7 @@ import java.util.logging.Logger;
 @Service
 public class SwitchStepService {
 
-    private SimpMessagingTemplate template;
+    private final SimpMessagingTemplate template;
     private final static Logger LOGGER = Logger.getLogger(SwitchStepService.class.getName());
 
     public SwitchStepService(SimpMessagingTemplate template){
@@ -27,10 +27,10 @@ public class SwitchStepService {
 
     private void trySend(String processInstanceId, SwitchStepMessage message){
         try {
-            template.convertAndSend("/process/" + processInstanceId, message);
+            template.convertAndSend("/process/" + processInstanceId, "");
         }
         catch (Exception ex){
-            throw new CannotSendSwitchStepMessageException("???");
+            throw new CannotSendSwitchStepMessageException(ex.getMessage());
         }
     }
 

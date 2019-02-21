@@ -1,0 +1,84 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<script src="./js/sockjs-0.3.4.js"></script>
+<script src="./js/stomp.js"></script>
+<script type="text/javascript">
+
+            var stompClient = null;
+            var processInstanceId = sessionStorage.getItem('processInstanceId');
+
+            function connect() {
+                var socket = new SockJS('http://localhost:41/process/' + processInstanceId);
+                stompClient = Stomp.over(socket);
+                stompClient.connect({}, function(frame) {
+                    console.log('Connected: ' + frame);
+                    stompClient.subscribe('/process/' + processInstanceId, function(messageOutput) {
+                        console.log('IN SUBSCRIBE');
+                        change();
+                    });
+                });
+            }
+
+            function send() {
+                goToNextTask();
+            }
+
+            function goToNextTask() {
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", "http://localhost:41/rest/task/?processInstanceId=" + processInstanceId);
+                xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+                xhr.send();
+                handleTask(xhr);
+            }
+
+            function handleTask (xmlHttpRequest) {
+                xmlHttpRequest.onreadystatechange = function() {
+                if (xmlHttpRequest.readyState == XMLHttpRequest.DONE) {
+                    var taskId = getTaskId(xmlHttpRequest)
+                    completeTask(taskId);
+                }
+               }
+            }
+
+            function getTaskId(xhr) {
+                var task = JSON.parse(xhr.response);
+                return task[0].id;
+            }
+
+            function completeTask(taskId) {
+                var xhr = new XMLHttpRequest();
+                var body = prepareVariables();
+                xhr.open("POST", "http://localhost:41/rest/task/" + taskId + "/complete");
+                xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+                xhr.send(body);
+            }
+
+            function prepareVariables() {
+                var name = document.getElementById('name').value;
+                return JSON.stringify(
+                    {
+                        "variables": {
+                            "approver": {
+                                "value":"Demo",
+                                "type":"String"
+                                }
+                            },
+                        "name": name
+                    });
+                }
+
+            function change(){
+                console.log('IN CHANGE');
+                window.location.href = 'http://localhost:41/finish';
+            }
+
+        </script>
+<body onload="connect();">
+<div>
+    <input type="text" id="name" placeholder="Write your name..."/>
+    <button id="send" onclick="send();">Send</button>
+</div>
+</body>
+</html>

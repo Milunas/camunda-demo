@@ -1,6 +1,7 @@
 package demo.domain.process.task.user.switchstep.listener;
 
 import demo.domain.process.task.user.switchstep.service.SwitchStepService;
+import org.camunda.bpm.application.impl.ServletProcessApplication;
 import org.camunda.bpm.engine.delegate.DelegateExecution;
 import org.camunda.bpm.engine.delegate.ExecutionListener;
 import org.camunda.bpm.engine.impl.bpmn.delegate.ExecutionListenerInvocation;
